@@ -28,7 +28,7 @@ CODE SEGMENT
          LOOP   LOOP1
 
 
-         
+HLT   
 CODE ENDS
 END START
 
