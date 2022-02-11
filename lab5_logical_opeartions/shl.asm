@@ -1,0 +1,14 @@
+DATA SEGMENT
+    NUM1 EQU 01H
+DATA ENDS
+
+CODE SEGMENT
+          ASSUME CS:CODE,DS:DATA
+    START:
+          MOV    AX,NUM1
+          SHL    AX,1
+
+          HLT
+
+CODE ENDS
+END START
