@@ -6,7 +6,8 @@ CODE SEGMENT
           ASSUME CS:CODE,DS:DATA
     START:
           MOV    AX,NUM1
-          SHR    AX,1
+          MOV    CL,04H
+          SHR    AX,CL
 
           HLT
 
