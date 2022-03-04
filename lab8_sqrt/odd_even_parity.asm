@@ -48,7 +48,7 @@ CODE SEGMENT
 
        
               
-       LABEL3:MOV    AH,08H
+       LABEL3:MOV    AH,09H
               INT    21H
               MOV    AH,4CH
               INT    21H
