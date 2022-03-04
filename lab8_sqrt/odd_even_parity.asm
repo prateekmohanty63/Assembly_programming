@@ -34,7 +34,6 @@ CODE SEGMENT
               DEC    CX
               JNZ    LOOP1
 
-
               MOV    CX,BX
               mov    AX,BX
               MOV    BL,NUM1
@@ -42,10 +41,17 @@ CODE SEGMENT
               CMP    AH,00H
               JNZ    ODD
               LEA    DX,STRING1
+              JMP    LABEL3
        ODD:   
               LEA    DX,STRING
-       ;INT    21H
+              JMP    LABEL3
 
+       
+              
+       LABEL3:MOV    AH,08H
+              INT    21H
+              MOV    AH,4CH
+              INT    21H
 
 
               HLT
