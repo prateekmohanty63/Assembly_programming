@@ -1,8 +1,8 @@
 DATA SEGMENT
-       NUM     EQU 3H
+       NUM     EQU 4H
        NUM1    EQU 02H
-       STRING1 DB  "EVEN"
-       STRING  DB  "ODD"
+       STRING1 DB  "EVEN$"
+       STRING  DB  "ODD$"
     
 DATA ENDS
 
@@ -38,7 +38,8 @@ CODE SEGMENT
               mov    AX,BX
               MOV    BL,NUM1
               DIV    BL
-              CMP    AH,00H
+              CMP    AH,00H                ; checking if the remainder is 1 or 0
+       ; If remainder is 1 then parity is odd else even
               JNZ    ODD
               LEA    DX,STRING1
               JMP    LABEL3
